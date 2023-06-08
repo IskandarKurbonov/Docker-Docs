@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Run test environment
-for config in ./tests/${config[@]}; do
+for config in ${config[@]}; do
   # Check if the yml exists
-  if [[ ! -f ${config} ]]; then
+  if [[ ! -f ./tests/${config} ]]; then
     echo "File ${config} doesn't exist!"
     exit 0
   fi
