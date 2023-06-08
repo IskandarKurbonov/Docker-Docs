@@ -1,15 +1,17 @@
 pipeline {
     agent any
     stages {
-        stage('Start Docker Compose') {
+        stage('Start PostgreSQL') {
             steps {
                 sh '''
-                    docker compose -p ds up -d
-                    sleep 60
-                    docker ps -a
-                    docker images -a
-                    chmod +x ./tests/tests.sh
-                    ./tests/tests.sh
+                    export PRODUCT_EDITION=""
+                    export RELEASE_VERSION=""
+                    for v in POSTGRES_VERSION=9.5; do
+                        export $v
+                    done
+                    NEW_ARR+=(postgres.yml rabbitmq.yml services.yml)
+                    export config=${NEW_ARR[@]}
+                    ./tests/test.sh
                    '''
             }
         }

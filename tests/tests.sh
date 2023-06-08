@@ -31,3 +31,21 @@ else
   exit 1
 fi
 
+echo "============================="
+echo "   Delete Docker Processes   "
+echo "============================="
+docker rm -f $(docker ps -aq)
+echo "============================="
+echo "     Processes is delete     "
+echo "============================="
+echo "   Delete Docker Images      "
+echo "============================="
+docker rmi -f $(docker images -aq)
+echo "============================="
+echo "      Images is delete       "
+echo "============================="
+echo "    Delete Docker Volumes    "
+echo "============================="
+docker volume rm -f $(docker volume ls)
+echo "    Volumes is delete        "
+
