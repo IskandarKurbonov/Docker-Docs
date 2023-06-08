@@ -3,12 +3,7 @@ name: "Docker-Docs CI"
 run-name: "CI tests Docker-Docs"
 
 on:
-  pull_request:
-    types: [opened, reopened, synchronize]
-    paths-ignore:
-      - '.github/**'
-      - 'tests/**'
-      - '**/README.md'
+  push:
 
 jobs:
   start_test_files:
