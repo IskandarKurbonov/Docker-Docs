@@ -14,7 +14,7 @@ done
 
 url=${url:-"http://localhost"}
 
-wakeup_timeout=120
+wakeup_timeout=60
 
 # Get Docs healthcheck status
 echo "Wait for service wake up"
