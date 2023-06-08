@@ -3,11 +3,11 @@
 # Run test environment
 for config in ${config[@]}; do
   # Check if the yml exists
-  if [[ ! -f ./tests/${config} ]]; then
+  if [[ ! -f ${config} ]]; then
     echo "File ${config} doesn't exist!"
     exit 0
   fi
-  docker compose -p ds -f ./tests/${config} up -d
+  docker compose -p ds -f ${config} up -d
   sleep 10
   docker ps -a
 done
