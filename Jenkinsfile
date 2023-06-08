@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Start PostgreSQL') {
+        stage('Start PostgreSQL 11') {
             steps {
                 sh '''
                     export PRODUCT_EDITION=""
