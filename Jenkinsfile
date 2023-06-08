@@ -10,6 +10,7 @@ pipeline {
                     for v in POSTGRES_VERSION=11; do export $v; done
                     NEW_ARR+=(postgres.yml rabbitmq.yml docs.yml)
                     export config=${NEW_ARR[@]}
+                    ./tests/tests.sh
                    '''
             }
         }
