@@ -10,6 +10,7 @@ pipeline {
                     NEW_ARR+=(postgres.yml rabbitmq.yml docs.yml)
                     export config=${NEW_ARR[@]}
                     ./tests/tests.sh
+                    sleep 30
                    '''
             }
         }
