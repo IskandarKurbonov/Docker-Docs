@@ -10,7 +10,7 @@ pipeline {
                     for v in POSTGRES_VERSION=9.5; do
                         export $v
                     done
-                    NEW_ARR+="postgres.yml"
+                    NEW_ARR="postgres.yml"
                     echo $NEW_ARR
                    '''
             }
