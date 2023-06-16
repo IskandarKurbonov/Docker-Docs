@@ -31,24 +31,24 @@ else
   exit 1
 fi
 
-echo "============================="
-echo "   Delete Docker Processes   "
-echo "============================="
-docker rm -f $(docker ps -aq)
-sleep 5
-echo "============================="
-echo "     Processes is delete     "
-echo "============================="
-echo "   Delete Docker Images      "
-echo "============================="
-docker rmi -f $(docker images -aq)
-sleep 5
-echo "============================="
-echo "      Images is delete       "
-echo "============================="
-echo "    Delete Docker Volumes    "
-echo "============================="
-sleep 5
-docker volume rm -f $(docker volume ls)
-echo "    Volumes is delete        "
+# echo "============================="
+# echo "   Delete Docker Processes   "
+# echo "============================="
+# docker rm -f $(docker ps -aq)
+# sleep 5
+# echo "============================="
+# echo "     Processes is delete     "
+# echo "============================="
+# echo "   Delete Docker Images      "
+# echo "============================="
+# docker rmi -f $(docker images -aq)
+# sleep 5
+# echo "============================="
+# echo "      Images is delete       "
+# echo "============================="
+# echo "    Delete Docker Volumes    "
+# echo "============================="
+# sleep 5
+# docker volume rm -f $(docker volume ls)
+# echo "    Volumes is delete        "
 
